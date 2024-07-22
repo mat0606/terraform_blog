@@ -13,3 +13,12 @@ variable "endpoint" {
 variable "user" {
   type = string
 }
+
+variable "image_id" {
+  type = string
+}
+
+variable "vm_name" {
+  type = string
+}
+
