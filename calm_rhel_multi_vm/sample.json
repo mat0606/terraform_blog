@@ -1,0 +1,10 @@
+{
+   "spec": {
+      "name": "r@@{calm_time}@@",
+      "resources": {
+         "memory_size_mib": 2048,
+         "num_sockets": 2,
+         "num_vcpus_per_socket": 1
+      }
+   }
+}
