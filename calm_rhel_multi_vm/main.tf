@@ -29,10 +29,10 @@ resource "local_file" "dump_runtime_value" {
 
 
 # Launch blueprint and provision your application
-#resource "nutanix_self_service_app_provision" "test" {
-#   bp_name         = var.bp_name
-#   app_name        = var.app_name
-#   app_description = var.app_description
+resource "nutanix_self_service_app_provision" "test" {
+   bp_name         = var.bp_name
+   app_name        = var.app_name
+   app_description = var.app_description
 #   application_profile     = var.app_profile Not implemented in Terraform 2.2.0
 #   action          = "stop"
 #   patch_name      = var.patch_name
@@ -44,4 +44,4 @@ resource "local_file" "dump_runtime_value" {
 #       value = var.substrate_config
 #     }
 #  }
-#}
+}

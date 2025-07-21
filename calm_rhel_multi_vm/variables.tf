@@ -22,6 +22,14 @@ variable "app_description" {
   type      = string
 }
 
+#variable "patch_name" {
+#  type      = string
+#}
+
+#variable "config_name" {
+#  type      = string
+#}
+
 # Not implemented in Terraform 2.2.0
 #variable "application_profile"{
 #  type = string
@@ -32,7 +40,7 @@ variable "substrate_config" {
   default = <<EOF
   {
    "spec": {
-      "name": "r@@{calm_time}@@",
+      "name": "vm-@@{calm_time}@@",
       "resources": {
          "memory_size_mib": 3072,
          "num_sockets": 2,
