@@ -9,3 +9,4 @@ app_description = "Initiated by Terraform"
 #application_profile  = "Small" Not implemented in Terraform 2.2.0
 
 
+
