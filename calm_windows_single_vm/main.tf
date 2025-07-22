@@ -35,13 +35,27 @@ resource "nutanix_self_service_app_provision" "test" {
    app_description = var.app_description
 #   application_profile     = var.app_profile Not implemented in Terraform 2.2.0
 #   action          = "stop"
-#   patch_name      = var.patch_name
-#   config_name     = var.config_name
-
+    
   runtime_editables {
       substrate_list {
          name= "WindowsVM"
          value = var.substrate_config
        }
+    }
+}
+
+# Run patch config (update config)
+resource "nutanix_self_service_app_patch" "test" {
+    app_uuid = nutanix_self_service_app_provision.test.id
+    patch_name = var.patch_name
+    config_name = var.config_name
+    vm_config {
+        memory_size_mib = "5128"
+        num_sockets = "2"
+        num_vcpus_per_socket = "1"
+    }
+    categories {
+        value = var.category
+        operation = "add"
     }
 }

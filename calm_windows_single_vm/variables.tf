@@ -22,13 +22,20 @@ variable "app_description" {
   type      = string
 }
 
-#variable "patch_name" {
-#  type      = string
-#}
+variable "patch_name" {
+  type      = string
+}
 
-#variable "config_name" {
-#  type      = string
-#}
+variable "config_name" {
+  type      = string
+}
+
+# category must be in key:value pair
+variable "category" {
+  type      = string
+}
+
+
 
 # Not implemented in Terraform 2.2.0
 #variable "application_profile"{
