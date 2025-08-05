@@ -34,7 +34,7 @@ resource "nutanix_self_service_app_provision" "test" {
    app_name        = var.app_name
    app_description = var.app_description
 #   application_profile     = var.app_profile Not implemented in Terraform 2.2.0
-   action          = "stop"
+#   action          = "stop"
     
   runtime_editables {
       substrate_list {

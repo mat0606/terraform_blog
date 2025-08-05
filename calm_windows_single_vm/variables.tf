@@ -35,13 +35,6 @@ variable "app_description" {
 #  type      = string
 #}
 
-
-
-# Not implemented in Terraform 2.2.0
-#variable "application_profile"{
-#  type = string
-#}
-
 variable "substrate_config" {
   type = string
   default = <<EOF
@@ -57,3 +50,13 @@ variable "substrate_config" {
   }
 EOF 
 }
+
+
+
+
+
+
+# Not implemented in Terraform 2.2.0
+#variable "application_profile"{
+#  type = string
+#}
