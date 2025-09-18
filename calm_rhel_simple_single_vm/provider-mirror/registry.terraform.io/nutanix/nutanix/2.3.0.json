@@ -1,0 +1,10 @@
+{
+  "archives": {
+    "linux_amd64": {
+      "hashes": [
+        "h1:8BuKezm0TCU+EABk6Gypgz1yjd4vKWKq+qpZlKqtWaU="
+      ],
+      "url": "terraform-provider-nutanix_2.3.0_linux_amd64.zip"
+    }
+  }
+}
