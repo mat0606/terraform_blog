@@ -2,7 +2,7 @@ terraform {
   required_providers {
     nutanix = {
       source  = "nutanix/nutanix"
-      version = "2.3.0"
+      version = "2.3.4"
     }
   }
 }
@@ -45,17 +45,17 @@ resource "nutanix_self_service_app_provision" "test" {
 }
 
 # Run patch config (update config)
-resource "nutanix_self_service_app_patch" "test" {
-    app_uuid = nutanix_self_service_app_provision.test.id
-    patch_name = var.patch_name
-    config_name = var.config_name
-    vm_config {
-        memory_size_mib = "3072"
-        num_sockets = "2"
-        num_vcpus_per_socket = "1"
-    }
-    categories {
-        value = var.category
-        operation = "add"
-    }
-}
+#resource "nutanix_self_service_app_patch" "test" {
+#    app_uuid = nutanix_self_service_app_provision.test.id
+#    patch_name = var.patch_name
+#    config_name = var.config_name
+#    vm_config {
+#        memory_size_mib = "3072"
+#        num_sockets = "2"
+#        num_vcpus_per_socket = "1"
+#    }
+#    categories {
+#        value = var.category
+#        operation = "add"
+#    }
+#}

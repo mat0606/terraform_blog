@@ -7,11 +7,13 @@ port         = "9440"
 bp_name     = "RHEL-Single-External"
 app_name    = "RHEL-Single-External"
 
+
 app_description = "Initiated by Terraform"
 #application_profile  = "Small" Not implemented in Terraform 2.2.0
 #config_name = "VMUpdateConfig"
 #patch_name = "VMUpdateConfig"
 #category = "Criticality:Significant" # Low, Significant, Critical
+# There is no network for 10.101.138.242.  It is purely to test the passing of variable
 ip_addr = "10.101.138.242"
 gateway = "10.101.138.1"
 

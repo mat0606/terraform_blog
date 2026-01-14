@@ -11,8 +11,8 @@ app_name    = "RHEL-Single-VPC"
 
 app_description = "Initiated by Terraform"
 #application_profile  = "Small" Not implemented in Terraform 2.2.0
-config_name = "VMUpdateConfig"
-patch_name = "VMUpdateConfig"
+#config_name = "VMUpdateConfig"
+#patch_name = "VMUpdateConfig"
 #category = "Criticality:Significant" # Low, Significant, Critical
 
 

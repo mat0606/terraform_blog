@@ -29,7 +29,7 @@ resource "local_file" "dump_runtime_value" {
 
 
 # Launch blueprint and provision your application
-resource "nutanix_self_service_app_provision" "test" {
+resource "nutanix_self_service_app_provision" "next25test" {
    bp_name         = var.bp_name
    app_name        = var.app_name
    app_description = var.app_description
@@ -45,17 +45,17 @@ resource "nutanix_self_service_app_provision" "test" {
 }
 
 # Run patch config (update config)
-resource "nutanix_self_service_app_patch" "test" {
-    app_uuid = nutanix_self_service_app_provision.test.id
-    patch_name = var.patch_name
-    config_name = var.config_name
-    vm_config {
-        memory_size_mib = "4096"
-        num_sockets = "2"
-        num_vcpus_per_socket = "1"
-    }
+#resource "nutanix_self_service_app_patch" "test" {
+#    app_uuid = nutanix_self_service_app_provision.test.id
+#   patch_name = var.patch_name
+#   config_name = var.config_name
+#    vm_config {
+#        memory_size_mib = "4096"
+#        num_sockets = "2"
+#        num_vcpus_per_socket = "1"
+#    }
 #    categories {
 #        value = var.category
 #        operation = "add"
 #    }
-}
+#}
