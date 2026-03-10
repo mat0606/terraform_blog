@@ -2,14 +2,22 @@ terraform {
   required_providers {
     nutanix = {
       source  = "nutanix/nutanix"
-      version = "2.3.1" # or your pinned version
+      version = "2.4.0" # or your pinned version
     }
   }
 }
 
+provider "nutanix" {
+  username     = var.pc_username
+  password     = var.pc_password
+  endpoint     = var.pc_endpoint
+  port         = var.pc_port
+  insecure     = true
+  wait_timeout = 10
+}
 
 resource "nutanix_virtual_machine_v2" "vm-3" {
-  name                 = var.image_name
+  name                 = var.vm_name
   num_cores_per_socket = 1
   num_sockets          = 1
   cluster {

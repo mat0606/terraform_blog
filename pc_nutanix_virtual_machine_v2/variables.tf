@@ -2,6 +2,11 @@ variable pc_endpoint{
   type = string
 }
 
+variable pc_port{
+  type = string
+}
+
+
 variable pc_username{
   type = string
 }
@@ -23,5 +28,9 @@ variable image_uuid{
 }
 
 variable subnet_uuid{
+  type = string
+}
+
+variable vm_name{
   type = string
 }
